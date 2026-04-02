@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Teacher Dashboard – Community Service</title>
+  <style>
+    body { font-family: sans-serif; padding: 2rem; }
+    h1 { margin-bottom: 1rem; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid #ddd; padding: 8px 12px; text-align: left; }
+    th { background: #f4f4f4; }
+    tr:nth-child(even) { background: #fafafa; }
+    .controls { margin-bottom: 1rem; display: flex; gap: 1rem; align-items: center; }
+    input { padding: 6px; border: 1px solid #ccc; border-radius: 4px; }
+    button { padding: 6px 14px; cursor: pointer; }
+    #status { color: gray; font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+  <h1>Community Service – All Entries</h1>
+  <div class="controls">
+    <input id="filterStudent" type="text" placeholder="Filter by org or cause..." />
+    <button onclick="applyFilter()">Filter</button>
+    <button onclick="loadData()">Refresh</button>
+    <button onclick="exportCSV()">Export CSV</button>
+    <span id="status">Loading...</span>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Organization</th>
+        <th>Cause</th>
+        <th>Description</th>
+        <th>Hours</th>
+        <th>Contact</th>
+      </tr>
+    </thead>
+    <tbody id="tableBody"></tbody>
+  </table>
+  <script src="script.js"></script>
+</body>
+</html>
