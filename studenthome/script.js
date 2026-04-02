@@ -196,5 +196,20 @@ $('#clearFilter').addEventListener('click', () => {
   renderEntries(entries);
 });
 
+// ── Auto-fill from QR code URL params ──
+function prefillFromUrl() {
+  const params = new URLSearchParams(window.location.search);
+  if (!params.has('org')) return; // no prefill data, skip
+
+  if (params.get('date'))    $('#date').value    = params.get('date');
+  if (params.get('org'))     $('#org').value     = params.get('org');
+  if (params.get('cause'))   $('#cause').value   = params.get('cause');
+  if (params.get('hours'))   $('#hours').value   = params.get('hours');
+  if (params.get('desc'))    $('#desc').value    = params.get('desc');
+  if (params.get('contact')) $('#contact').value = params.get('contact');
+}
+
+prefillFromUrl(); 
+
 // Initialize
 load();
