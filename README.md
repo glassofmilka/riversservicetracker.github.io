@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta http-equiv="refresh" content="0; url=/studenthome" />
+    <meta http-equiv="refresh" content="0; url=/riversservicetracker.github.io/studenthome" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Redirecting...</title>
     <style>
@@ -14,6 +14,6 @@
     </style>
   </head>
   <body>
-    <p>Redirecting you to <a href="/studenthome">/home</a>...</p>
+    <p>Redirecting you to <a href="/riversservicetracker.github.io//studenthome">/home</a>...</p>
   </body>
 </html>
