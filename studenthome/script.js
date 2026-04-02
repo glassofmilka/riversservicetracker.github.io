@@ -209,7 +209,9 @@ function prefillFromUrl() {
   if (params.get('contact')) $('#contact').value = params.get('contact');
 }
 
-prefillFromUrl(); 
-
+document.addEventListener('DOMContentLoaded', () => {
+  prefillFromUrl();
+  load();
+});
 // Initialize
 load();
